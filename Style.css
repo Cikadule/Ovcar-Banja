@@ -47,7 +47,7 @@ body {
     
     padding-top: 40px;
     padding-bottom: 600px;
-    font-size: 20vh;
+    font-size: 10rem;
     color: rgb(10, 24, 14);
     text-transform: uppercase;
     font-style: italic;
@@ -193,8 +193,9 @@ body {
 
 
 .priroda {
+    
     background-color: rgb(248, 253, 243);
-    display: grid; 
+   
     
 }
 .priroda h2 {
@@ -204,68 +205,66 @@ body {
     text-transform: uppercase;
     font-style: italic;
 }
+
 .img-holder {
-    
-    position: relative;
-    margin: 150px;
+    padding: 10%;
+    width: 100vw;
+    height: 200vh;
     display: grid;
+   
     grid-template-areas:  "a b c d d" 
                           "e f f d d" 
                           "g f f h i" 
                           "g j k l l";
-    align-content: space-between;
-    justify-content: space-between;
+    
 }
+
 .img-holder div {
     border: 1px solid rgb(70, 69, 69);
     margin: 10px;
     border-radius: 10px;
 }
-.img-holder a {
-    position: relative;
-    bottom: -242px;
-    text-decoration: none;
-}
+
 .img-holder p {
+    visibility: hidden;
     text-transform: uppercase;
+    font-size: 2rem;
     color: white;
     font-weight: bold;
     background: rgba(0, 0, 0, 0.4);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
    
 }
-.img-holder div:hover {
+.img-holder div:hover  p  {
     transition: 1s;
-    height: 120%;
-    width: 120%;
-    z-index: 0;   
+    visibility: visible;
 }
 
 .slika-1 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: 100%;
     background-image: url(./Images/Priroda/01.JPG);
     background-size: cover;
     grid-area: a;
 }
 .slika-2 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: 100%;
     background-image: url(./Images/Priroda/09.JPG);
     background-size: cover;
     grid-area: b;   
 }
 .slika-3 { 
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: 100%;
     background-image: url(./Images/Priroda/04.JPG);
     background-size: cover;
     grid-area: c; 
 }
 .slika-4 {
-    height: 620px;
-    width: 620px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/13.JPG);
     background-size: cover;
     grid-area: d;
@@ -275,15 +274,15 @@ body {
     bottom: -320px;
 }
 .slika-5 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/03.JPG);
     background-size: cover;
     grid-area: e;
 }
 .slika-6 {
-    height: 620px;
-    width: 620px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/02.jpg);
     background-size: cover;
     grid-area: f;
@@ -293,8 +292,8 @@ body {
     bottom: -320px;
 }
 .slika-7 {
-    height: 620px;
-    width: 300px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/12.JPG);
     background-size: cover;
     grid-area: g;
@@ -304,40 +303,73 @@ body {
     bottom: -320px;
 }
 .slika-8 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/10.JPG);
     background-size: cover;
     grid-area: h;
 }
 .slika-9 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/08.JPG);
     background-size: cover;
     grid-area: i;
 }
 .slika-10 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/07.JPG);
     background-size: cover;
     grid-area: j;
 }
 .slika-11 {
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/11.JPG);
     background-size: cover;
     grid-area: k;
 }
 .slika-12 {
-    height: 300px;
-    width: 620px;
+    max-width: 100%;
+    max-height: auto;
     background-image: url(./Images/Priroda/06.JPG);
     background-size: cover;
     grid-area: l;
 }
+@media screen and (max-width:1200px){
+    .img-holder {
+        padding: 8%;
+        width: 100vw;
+        height: 200vh;
+        display: grid;
+        grid-template-areas:  "a b d d" 
+                              "e f f c" 
+                              "g h i j" 
+                              "g l l k";
+        
+    }
+    
+    
+}
+@media screen and (max-width:800px){
+    .img-holder {
+        padding: 6%;
+        width: 100vw;
+        height: 200vh;
+        display: grid;
+        grid-template-areas:  "a b" 
+                              "c d" 
+                              "e f" 
+                              "g h"
+                              "i j"
+                              "k l";
+    }
+    
+    
+}
+
+
 .manastiri {
     background-color: rgb(248, 253, 243);
     border-top: 1px solid rgb(219, 219, 219);
@@ -362,8 +394,8 @@ body {
     color: rgb(121, 117, 117);
 }
 .manastiri img {
-    height: 320px;
-    width: 400px;
+    max-width: 100%;
+    height: 100%;
     padding: 20px;
     border: 1px solid rgb(194, 191, 191);
 }
